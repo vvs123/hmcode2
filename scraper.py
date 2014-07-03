@@ -31,7 +31,7 @@ while True:
     response = br.submit()
     #print response.read()
     
-    url = "http://www.hm.com/gb/bag/add?artnr=818080&stockSize=305"
+    url = "http://www.hm.com/gb/bag/add?artnr=611256&stockSize=034"
     response = br.open(url)
     url = "https://www.hm.com/gb/checkout"
     response = br.open(url)
@@ -58,7 +58,7 @@ while True:
         count = count + 1
         bcount = bcount + 1
         if bcount > 125:
-            url = "http://www.hm.com/gb/bag/decreaseQty?artnr=818080&stockSize=305"
+            url = "http://www.hm.com/gb/bag/decreaseQty?artnr=611256&stockSize=034"
             response = br.open(url)
             url = "http://www.hm.com/gb/logout"
             response = br.open(url)
