@@ -11,7 +11,7 @@ br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.
 
 
 #scraperwiki.sqlite.execute("delete from swdata where Code>0") 
-count = 0
+count = 0735
 while True:
     bcount = 0
     url = "https://www.hm.com/gb/login"
@@ -50,7 +50,7 @@ while True:
         el = root.cssselect("tfoot td span")[0].text.strip()
         price = float(el[2:])
         print temp2,price
-        if price < 33:
+        if price < 37:
             scraperwiki.sqlite.save(unique_keys=["Code"], data={"Code":count, "value":price})
         url = "https://www.hm.com/gb/checkout/ordersummary/discountCode/remove?discountCode=" + temp2
         response = br.open(url)
